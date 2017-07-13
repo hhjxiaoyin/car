@@ -1,0 +1,122 @@
+body {
+    background: #fbf8f8;
+    font-family: Arial, Helvetica, sans-serif, "新宋体";
+}
+
+li {
+    list-style: none;
+}
+#dp_title {
+    background: #ff711c;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+}
+.pull-left i {
+    margin-left: 8px;
+}
+.weui-navbar{
+	background:#fff;
+}
+.weui-navbar:after{
+	border-bottom: none;
+	
+}
+.weui-navbar__item:after{
+	border-right:none;
+}
+.weui-navbar__item.weui-bar__item--on {
+    color: #353333;
+    font-size: 16px;
+    background-color: #fff;
+border-bottom: 2px solid #ff711c;
+
+}
+/*目录*/
+#myapply-title {
+    background:#ff711c;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+}
+.weui-navbar{
+    z-index:100;
+    position: fixed;
+    top:40px;
+    height:48px;
+}
+.weui-navbar + .weui-tab__bd {
+    margin-top: 90px;
+}
+.pull-left i {
+    margin-left: 8px;
+}
+
+.weui-media-box_appmsg .weui-media-box__thumb {
+    height: 80px;
+    border-radius: 50%;
+}
+
+#myapply-ming {
+    font-size: 18px;
+    margin-left: 8px;
+}
+
+#myapply-zt {
+    margin-left: 8px;
+    margin-top: 6px;
+    font-size: 14px;
+    color: #e69022;
+}
+
+#myapply-me {
+    margin-top: 6px;
+}
+
+#myapply-me label {
+    margin-left: 16px;
+    color: #6a6a6a;
+    font-weight:bold;
+    margin-right: 12px;
+}
+
+.myapply-t {
+    border-bottom: 1px solid #d0cdcd;
+}
+
+.weui-flex__item {
+    font-size: 18px;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.fa-star-half-o {
+    color: #1c821c;
+    margin-right: 6px;
+}
+/*图片位置*/
+img{
+    margin-left:16%;
+    margin-top:10px;
+}
+ul{
+     margin-left: 106px;
+    margin-top: -106px;
+}
+ul li{
+    line-height: 48px;
+
+}
+.weui-row{
+    margin-top:8px;
+}
+#id_a{
+    margin-top:10px;
+    color:#090908;
+    font-size:16px;
+}
+#id_b{
+    margin-top:6px;
+    color:#090908;
+    font-size:16px;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>知会事件</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" href="../lib/weui.min.css">
+    <link rel="stylesheet" href="../css/jquery-weui.css">
+    <link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="css/demos.css">
+
+  </head>
+
+  <body ontouchstart>
+    <header class="bar bar-nav">
+        <h1 class="title">审批</h1>
+        <a href="javascript:;" onclick="javascript:history.back(-1);" class="icon pull-left"><i class="fa fa-chevron-left"></i></a>
+        <a href="login.html" class="icon pull-right"><i class="fa fa-user"></i></a>
+    </header>
+    <div class="weui-grids"  style="padding-top: 2.2rem">
+      <a href="travel.html" class="weui-grid js_grid">
+        <div class="weui-grid__icon">
+          <i class="fa fa-apple" style="font-size: 30px;"></i>
+        </div>
+        <p class="weui-grid__label">
+          待我审批
+        </p>
+      </a>
+      <a href="usecar.html" class="weui-grid js_grid">
+        <div class="weui-grid__icon">
+          <i class="fa fa-android" style="font-size: 30px;"></i>
+        </div>
+        <p class="weui-grid__label">
+          我发起的
+        </p>
+      </a>
+      <a href="leave.html" class="weui-grid js_grid">
+        <div class="weui-grid__icon">
+          <i class="fa fa-windows" style="font-size: 30px;"></i>
+        </div>
+        <p class="weui-grid__label">
+          抄送我的
+        </p>
+      </a>
+    </div>
+    
+    <div class="weui-footer">
+      <p class="weui-footer__links">
+        <a href="index.html" class="weui-footer__link">知会外出事宜</a>
+      </p>
+      <p class="weui-footer__text">Copyright © 2016 jqweui.io</p>
+    </div>
+
+    <style>
+      .weui-footer {
+        margin: 25px 0 10px 0;
+      }
+    </style>
+
+
+    <script src="../lib/jquery-2.1.4.js"></script>
+    <script src="../lib/fastclick.js"></script>
+    <script>
+      $(function() {
+        FastClick.attach(document.body);
+      });
+    </script>
+    <script src="../js/jquery-weui.js"></script>
+
+  </body>
+
+</html>

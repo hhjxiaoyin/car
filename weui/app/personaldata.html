@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>个人中心</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+">
+<link rel="stylesheet" href="../lib/weui.min.css">
+<link rel="stylesheet" href="../css/jquery-weui.css">
+<link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.css">
+<link rel="stylesheet" href="css/demos.css">
+  </head>
+<body ontouchstart>
+    <header class="bar bar-nav">
+        <h1 class="title">个性资料</h1>
+        <a href="javascript:;" onclick="javascript:history.back(-1);" class="icon pull-left"><i class="fa fa-chevron-left"></i></a>
+        <a href="login.html" class="icon pull-right"><i class="fa fa-user"></i></a>
+    </header>
+    <section style="padding-top: 2.2rem">
+     <div class="weui-cells weui-cells_form">
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label for="name" class="weui-label">性别</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" id="sex" type="text" value="">
+        </div>
+      </div>
+      <div class="weui-cell">
+        <div class="weui-cell__hd"><label for="name" class="weui-label">爱好</label></div>
+        <div class="weui-cell__bd">
+          <input class="weui-input" id="in" type="text" value="">
+        </div>
+      </div>
+    </div>
+    <script src="../lib/jquery-2.1.4.js"></script>
+<script src="../lib/fastclick.js"></script>
+<script>
+  $(function() {
+    FastClick.attach(document.body);
+  });
+</script>
+<script src="../js/jquery-weui.js"></script>
+
+
+    <script>
+      $("#sex").select({
+        title: "选择性别",
+        items: ["男", "女", "其他"],
+        onChange: function(d) {
+          console.log(this, d);
+        },
+        onClose: function() {
+          console.log("close");
+        },
+        onOpen: function() {
+          console.log("open");
+        },
+      });
+      $("#in").select({
+        title: "您的爱好",
+        multi: true,
+        min: 2,
+        max: 3,
+        items: [
+          {
+            title: "画画",
+            value: 1,
+            description: "额外的数据1"
+          },
+          {
+            title: "打球",
+            value: 2,
+            description: "额外的数据2"
+          },
+          {
+            title: "唱歌",
+            value: 3,
+            description: "额外的数据3"
+          },
+          {
+            title: "游泳",
+            value: 4,
+            description: "额外的数据4"
+          },
+          {
+            title: "健身",
+            value: 5,
+            description: "额外的数据5"
+          },
+          {
+            title: "睡觉",
+            value: 6,
+            description: "额外的数据6"
+          },
+        ],
+        beforeClose: function(values, titles) {
+          if(values.indexOf("6") !== -1) {
+            $.toast("不能选睡觉", "cancel");
+            return false;
+          }
+          return true;
+        },
+        onChange: function(d) {
+          console.log(this, d);
+        },
+        onClose: function (d) {
+          console.log('close')
+        }
+      });
+    </script>
+     <div class='demos-content-padded'>
+      <a href="javascript:;" class="weui-btn weui-btn_primary">  修改完毕</a>
+    </div>
+  </body>
+</html>

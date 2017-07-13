@@ -1,0 +1,169 @@
+             /*个人页面css*/
+             body{
+                font-family: -apple-system-font, "Helvetica Neue", "Roboto", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+             }
+             #personal-img {
+                 background-image: url(../images/personal.jpg);
+                 background-size: 100% 100%;
+                 height: 15%;
+                 display: block;
+             }
+             
+             #per-title {
+                 margin-top: -50px;
+                 height: 100px;
+             }
+             
+             #per-touxiang {
+                 margin: 20px auto;
+             }
+             
+             #per-touxiang img {
+                 height: 70px;
+                 width: 70px;
+                 border-radius: 50%;
+             }
+             
+             #per-ming {
+                 margin-top: 0px;
+             }
+             
+             #per-mz {
+                 margin-left: 43%;
+                 margin-bottom: 8px;
+                 font-weight: bold;
+                 font-size: 16px;
+                 letter-spacing: 2px;
+             }
+             
+             #per-col {
+                 margin-top: -10px;
+             }
+             
+             #per-col .weui-col-33 {
+                 text-align: center;
+                 font-size: 14px;
+             }
+             
+             #per-success .weui-badge {
+                 background-color: #04BE02;
+             }
+             
+             #per-doing .weui-badge {
+                 background-color: #FFA42F;
+             }
+             
+             .weui-cells {
+                 margin-top: 10px;
+                 background-color: rgba(251, 251, 251, 0.95);
+             }
+             
+             #per-return {
+                 margin-top: 20px;
+                 background: rgb(249, 247, 247);
+                 color: #000;
+             }
+             
+             #per-message {
+                 margin-left: 10px;
+                 margin-right: 10px;
+             }
+             
+             .weui-tabbar__item.weui-bar__item--on .weui-tabbar__label {
+                 color: rgb(253, 144, 2);
+             }
+             
+             .weui-tabbar {
+                 background-color: #ececec;
+             }
+             /*待处理弹出框*/
+             
+             .weui-popup__modal {
+                 bottom: 58px;
+             }
+             
+             .weui-dialog__btn {
+                 color: #000;
+                 font-size: 14px;
+             }
+             /*用车申请*/
+             
+             #apply-title {
+                 background-color:#ff711c;
+
+             }
+             
+             .title {
+                 font-weight: bold;
+                 font-size: 18px;
+             }
+             
+             .apply-kuang {
+                 margin-top: 2px;
+             }
+             
+             .weui-label {
+                 display: block;
+                 width: 80px;
+                 word-wrap: break-word;
+                 word-break: break-all;
+                 font-weight: bold;
+                 font-size: 14px;
+             }
+             
+             #textarea {
+                 background: #fafafa;
+             }
+             
+             #reason {
+                 margin-top: -26px;
+             }
+             
+             label {
+                 margin-left: 8px;
+             }
+             #confirm{
+              margin-top:12px;
+             }
+         /*动态信息*/
+            #dongtai-title{
+                background:#ff711c;
+                color:#fff;
+                font-size:.90rem;
+                letter-spacing: 2px;
+                font-weight:bold;
+                text-align: center;
+                padding-top:68px;
+                height:0px;
+            }
+            .fa-expeditedssl{
+  background:#f43530;
+}
+#mz-col{
+  margin-top:-4px;
+  font-size:14px;
+
+}
+#mz-ming{
+    margin-left:9px;
+    font-weight:bold;
+}
+.fa-hand-o-right{
+   color:#af1515;
+}
+#mz-cell{
+  margin-top:8px;
+  height:62px;
+}
+#mz-close{
+      margin-top: 20px;
+    background: rgb(249, 247, 247);
+    color: #000;
+}
+#half{
+  background:rgba(61,65,69,.61);
+}
+.weui-cell_access{
+    color:#4f4f4f;
+    font-size:14px;
+}

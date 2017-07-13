@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>用车申请</title>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+">
+
+<link rel="stylesheet" href="../lib/weui.min.css">
+<link rel="stylesheet" href="../css/jquery-weui.css">
+<link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.css">
+<link rel="stylesheet" href="css/demos.css">
+  <link rel="stylesheet" href="css/send.css">
+  </head>
+
+  <body ontouchstart>
+    <header class="bar bar-nav" id="dp_title">
+        <h1 class="title">调度员</h1>
+        <a href="javascript:;" onclick="javascript:history.back(-1);" class="icon pull-left"><i class="fa fa-chevron-left"></i></a>
+     </header>
+    <div class="weui-tab" style="margin-top:2.2rem">
+      <div class="weui-navbar">
+        <div class="weui-navbar__item weui-bar__item--on" href="#tab1">
+          详细信息
+        </div>
+        <div class="weui-navbar__item " href="#tab2">
+          调度处理
+        </div>
+      </div>
+      <div class="weui-tab__bd">
+        <div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active weui-pull-to-refresh">
+          <div class="weui-pull-to-refresh__layer" style="display:none">
+            <div class='weui-pull-to-refresh__preloader' style="display:none"></div>
+            <div class="down" style="display:none"></div>
+            <div class="up" style="display:none"></div>
+            <div class="refresh">正在刷新</div>
+          </div>
+          <h1 class="doc-head"></h1>
+          <div class="content-padded">
+            <div class="dp_cata">
+           <div class="weui-flex" id="myapply-me">
+      <label >申  请  人 </label><div class="weui-flex__item">何晓殷</div>
+    </div>
+    <div class="weui-flex" id="myapply-me">
+      <label >审批编号</label><div class="weui-flex__item">0100</div>
+    </div>
+     <div class="weui-flex" id="myapply-me">
+      <label >申请部门</label><div class="weui-flex__item">营销部</div>
+    </div>
+     <div class="weui-flex" id="myapply-me">
+      <label >联系电话</label><div class="weui-flex__item">183748828</div>
+    </div>
+     <div class="weui-flex" id="myapply-me">
+      <label >用车缘由</label><div class="weui-flex__item">出差</div>
+    </div>
+     <div class="weui-flex" id="myapply-me">
+      <label >用车日期</label><div class="weui-flex__item">2017-07-11 12:00</div>
+    </div>
+     <div class="weui-flex" id="myapply-me">
+      <label >预计用时</label><div class="weui-flex__item">3（天）</div>
+    </div>
+        <div class="weui-flex" id="myapply-me">
+      <label >车辆类型</label><div class="weui-flex__item">小轿车</div>
+    </div>
+    <div class="weui-flex" id="myapply-me">
+      <label >车辆数量</label><div class="weui-flex__item">1</div>
+    </div>
+    <div class="weui-flex" id="myapply-me">
+      <label >审批人员</label><div class="weui-flex__item">姚敏</div>
+    </div>
+    <div class="weui-flex" id="myapply-me">
+      <label >审批人员</label><div class="weui-flex__item">刘茂林</div>
+    </div>
+    <div class="weui-flex" id="myapply-me">
+      <label >抄送人员</label><div class="weui-flex__item">于越</div>
+    </div>
+        <div class="weui-row">
+       <img src="images/lianjie.png" />
+ 
+      <ul>
+      <li id="id_a">湖南省长沙市芙蓉区浏阳河</li>
+      <li id="id_b">湖南省郴州市永兴县</li>
+      </ul>
+    </div>
+            </div>
+          </div>
+        </div>
+        <div id="tab2" class="weui-tab__bd-item weui-pull-to-refresh">
+          <h1 class="doc-head"></h1>
+          <div class="content-padded">
+            <div class="weui-cells__title"><i class="fa fa-star-half-o"></i>车辆选择</div>
+           </div>
+        </div>
+      </div>
+    </div>
+    <script src="../lib/jquery-2.1.4.js"></script>
+<script src="../lib/fastclick.js"></script>
+<script>
+  $(function() {
+    FastClick.attach(document.body);
+  });
+</script>
+<script src="../js/jquery-weui.js"></script>
+
+    <script>
+      $('.weui-tab__bd-item').pullToRefresh().on('pull-to-refresh', function (done) {
+        var self = this
+        setTimeout(function() {
+          $(self).pullToRefreshDone();
+        }, 2000)
+      })
+    </script>
+  </body>
+</html>

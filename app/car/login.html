@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>用车申请</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" href="../lib/weui.min.css">
+    <link rel="stylesheet" href="../css/jquery-weui.css">
+    <link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="css/demos.css">
+<link rel="stylesheet" href="css/login.css">
+  </head>
+
+  <body ontouchstart>
+<!--    <header class="bar bar-nav">
+        <h1 class="title">手机账号登录</h1>
+    </header> -->
+    <header class='demos-header' style="padding-top: 3.2rem">
+      <h5 class="demos-title"><img src="images/logo.png"></h5>
+      <p class='demos-sub-title'>外出用车申请</p>
+    </header>
+    <section>
+     <div class="weui-cells weui-cells_form " id="login-cell">
+        <div class="weui-cell ">
+          <div class="weui-cell__hd"><label class="weui-label" id="login-phone">手机</label></div>
+          <div class="weui-cell__bd">
+            <input class="weui-input" id="login-input" type="text" placeholder="输入手机号码">
+          </div>
+        </div>
+        <div class="weui-cell">
+          <div class="weui-cell__hd"><label class="weui-label" id="login-phone">密码</label></div>
+          <div class="weui-cell__bd">
+            <input class="weui-input" id="login-input" type="password" placeholder="输入密码">
+          </div>
+        </div>
+      </div>
+      <div class='demos-content-padded'>
+        <a href="user.html" id="btn-color" class="weui-btn weui-btn_primary">登   录</a>
+       
+      </div>
+    </section>
+    <div class="weui-footer">
+      <p class="weui-footer__links">
+        <a href="index.html" class="weui-footer__link"></a>
+      </p>
+      <p class="weui-footer__text">Copyright © 2017 usecar.com</p>
+    </div>
+
+    <style>
+      .weui-footer {
+        margin: 25px 0 10px 0;
+      }
+    </style>
+
+
+    <script src="../lib/jquery-2.1.4.js"></script>
+    <script src="../lib/fastclick.js"></script>
+    <script>
+      $(function() {
+        FastClick.attach(document.body);
+      });
+    </script>
+    <script src="../js/jquery-weui.js"></script>
+
+  </body>
+
+</html>

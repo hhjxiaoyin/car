@@ -1,0 +1,76 @@
+           /*申请用车css*/
+.demos-content-padded {
+  padding: 15px;
+}
+
+.demos-second-title {
+  text-align: center;
+  font-size: 24px;
+  color: #3cc51f;
+  font-weight: 400;
+  margin: 0 25%;
+
+}
+#apply-cell{
+    position: absolute;
+  top:156px;
+}
+.apply-number{
+  font-weight:bold;
+  font-size:16px;
+ margin-left:4px;
+}
+.weui-cells:before{
+  border-top:none;
+}
+.weui-cells:after{
+  border-bottom:none;
+}
+.weui-cells{
+  margin-top:0px;
+}
+.number-content{
+vertical-align:middle;
+ font-size: 18px;
+ text-align: center;
+color:#131212;
+margin-right:8px;
+}
+#apply-title{
+                 background:#ff711c;
+    font-size:18px;
+   font-weight:bold;
+  color:#fff;
+}
+#apply-form{
+   margin:10px auto ;
+}
+#apply-form label{
+  font-size:18px;
+  color:#000;
+  font-weight:700;
+  margin-left:12px;
+}
+input[type="radio"] {
+  margin: 3px 3px 0px 5px;
+}
+
+.form-wripper{
+  margin-right:20px;
+}
+#apply-title .fa-chevron-left{
+color:#fff; 
+margin-left:10px;
+}
+.fa-user{
+  color:#424040; 
+}
+#textarea {
+    border: 1px solid #a2a0a0;
+    border-radius: 6px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#confirm{
+  margin-top:6px;
+}

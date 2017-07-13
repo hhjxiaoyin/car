@@ -1,0 +1,151 @@
+body {
+    background: #fff;
+    font-family: -apple-system-font, "Helvetica Neue", "Roboto", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+}
+
+li {
+    list-style: none;
+}
+#myapply-title {
+    background:#ff711c;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+}
+
+.pull-left i {
+    margin-left: 8px;
+}
+
+.weui-media-box_appmsg .weui-media-box__thumb {
+    height: 80px;
+    border-radius: 50%;
+}
+
+#myapply-ming {
+    font-size: 18px;
+    margin-left: 8px;
+}
+
+#myapply-zt {
+    margin-left: 8px;
+    margin-top: 6px;
+    font-size: 14px;
+    color: #e69022;
+}
+
+#myapply-me {
+    margin-top: 6px;
+}
+
+#myapply-me label {
+    margin-left: 16px;
+    color: #6a6a6a;
+    font-weight:bold;
+    margin-right: 12px;
+}
+
+.myapply-t {
+    border-bottom: 1px solid #d0cdcd;
+}
+
+.weui-flex__item {
+    font-size: 18px;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.fa-star-half-o {
+    color: #1c821c;
+    margin-right: 6px;
+}
+
+
+/*审批进展*/
+
+.stepInfo {
+    position: relative;
+    background: #fff;
+       margin-top: 40px;
+    margin-left: 16px;
+
+    width: 310px;
+}
+
+.stepInfo li {
+    float: left;
+    width: 48%;
+    height: 0.1em;
+    background: #060606;
+}
+
+.stepIco {
+    border-radius: 1em;
+    padding: 0.03em;
+    background: #bbb;
+    text-align: center;
+    line-height: 1.5em;
+    color: #fff;
+    position: absolute;
+    width: 1.4em;
+    height: 1.4em;
+}
+
+.stepIco1 {
+    top: -0.7em;
+    left: 0%;
+}
+
+.stepIco2 {
+    top: -0.7em;
+    left: 21%;
+}
+
+.stepIco3 {
+    top: -0.7em;
+    left: 47%;
+}
+
+.stepIco4 {
+    top: -0.7em;
+    left: 71%;
+}
+
+.stepIco5 {
+    top: -0.7em;
+    left: 95%;
+}
+
+.stepText {
+    color: #666;
+    margin-top: 0.2em;
+    width: 4em;
+    text-align: center;
+    margin-left: -1.4em;
+}
+#myapply-bottom{
+    background: #f9f7f7;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 40px;
+}
+#myapply-lc{
+	height:110px;
+	 background: #fff;
+	 border-bottom: none;
+
+}
+.weui-col-50{
+	text-align: center;
+	margin-top:0px;
+	margin-right:0px;
+	padding-top:8px;
+	height:100%;
+	letter-spacing: 8px;
+}
+.bottoma{
+	background:#ff711c;
+	color:#fff;
+}

@@ -1,0 +1,43 @@
+#user-title{
+  font-size:18px;
+   font-weight:bold;
+  color:#000;
+  border-bottom: 1px solid #eee;
+}
+    
+
+#user-img{
+  margin:30%;
+}
+#user-img img{
+    margin-left:25%;
+}
+#user-img a{
+    margin-left:30%;
+    margin-top:16px;
+    font-size:18px;
+    color:#000;
+}
+.weui-flex{
+  height:250px;
+}
+.demos-content-padded{
+  padding:0px;
+}
+#user-register {
+  font-size:18px;
+    color:#fbd8a8;
+    letter-spacing:4px;
+    border:none;
+    width:230px;
+    margin:4px auto;
+}
+#user-my{
+  font-size:18px;
+    color:#777675;
+    letter-spacing:4px;
+    background:#fff;
+   border:1px solid #9c9a9a;
+    width:230px;
+    margin:22px auto;
+}
