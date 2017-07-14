@@ -14,6 +14,7 @@
 <link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.css">
 <link rel="stylesheet" href="css/demos.css">
   <link rel="stylesheet" href="css/send.css">
+      <script src="js/mobileSelect.js" type="text/javascript"></script>
   </head>
 
   <body ontouchstart>
@@ -92,10 +93,19 @@
           <h1 class="doc-head"></h1>
           <div class="content-padded">
             <div class="weui-cells__title"><i class="fa fa-star-half-o"></i>车辆选择</div>
+                 <div class="demo">
+            <div id="trigger5">车辆选择</div>
+            <div class="weui-cells__title"><i class="fa fa-star-half-o"></i>司机选择</div>
+            <div id="trigger1">司机选择</div>        
+        </div>
+        <div class='demos-content-padded' id="confirm" onclick="window.location.href= 'mymessage.html'">
+                            <input href="" id='show-toast' class="weui-btn weui-btn_primary " value="确 认 提 交" type="submit" style="margin-top:30px">
+                        </div> 
            </div>
         </div>
       </div>
     </div>
+
     <script src="../lib/jquery-2.1.4.js"></script>
 <script src="../lib/fastclick.js"></script>
 <script>
@@ -112,6 +122,123 @@
           $(self).pullToRefreshDone();
         }, 2000)
       })
+    </script>
+
+    <script type="text/javascript">
+    var weekdayArr=['张三司机 18283112121','李四司机 12817218278','王五司机 121212818182','崔敏司机 1921892010','刘生司机 1788218212 ','姚健司机 121821821 ','周汉司机 12329132712 '];
+    var UplinkData =
+[        {
+         id:'1',
+         value:'中巴',
+       childs:[
+             {
+                 id:'2',
+                 value:'51座金龙客车'
+             },
+             {
+                 id:'3',
+                 value:'55座双层巴士'
+             },
+         ]
+     },
+    {
+        id:'2',
+        value:'小轿车',
+        childs:[
+            {
+                id:'1',
+                value:'桑塔纳'
+            },
+            {
+                id:'2',
+                value:'宝马'
+            },
+            {
+                id:'3',
+                value:'一汽大众'
+            },
+            {
+                id:'4',
+                value:'长安'
+            },
+        ]
+    },
+    {
+        id:'3',
+        value:'吉普车',
+        childs:[
+            {
+                id:'1',
+                value:'东风铁甲'
+            },
+            { 
+                id:'2',
+                value:'北汽勇士'
+            },
+                  { 
+                id:'3',
+                value:'广汽菲亚特克莱斯勒Jeep'
+            },
+        ]
+    },
+    {
+        id:'4',
+        value:'面包车',
+        childs:[
+            {
+                id:'1',
+                value:'长安'
+            },
+            {
+                id:'2',
+                value:'五菱'
+            },
+            {
+                id:'3',
+                value:'东风'
+            }
+        ]
+    },
+    {
+        id:'5',
+        value:'中型客车',
+        childs:[
+            {
+                id:'1',
+                value:'东南得利卡1'
+            },
+            {
+                id:'2',
+                value:'东南得利卡2'
+            },
+            {
+                id:'3',
+                value:'东南得利卡3'
+            }
+        ]
+    }
+];
+var mobileSelect1 = new MobileSelect({
+    trigger: '#trigger1', 
+    title: '单项选择',  
+    wheels: [
+                {data: weekdayArr}
+            ],
+    position:[2] //初始化定位 打开时默认选中的哪个  如果不填默认为0
+});
+var mobileSelect5 = new MobileSelect({
+    trigger: '#trigger5',
+    title: '车辆选择',
+    wheels: [
+                {data : UplinkData}
+            ],
+    transitionEnd:function(indexArr, data){
+        console.log(data);
+    },
+    callback:function(indexArr, data){
+        console.log(data);
+    } 
+});
     </script>
   </body>
 </html>

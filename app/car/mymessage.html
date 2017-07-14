@@ -9,18 +9,55 @@
     <link rel="stylesheet" href="../lib/weui.min.css">
     <link rel="stylesheet" href="../css/jquery-weui.css">
     <link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.css">
+        <link rel="stylesheet" href="css/mymessage.css">
     <link rel="stylesheet" href="css/demos.css">
-    <link rel="stylesheet" href="css/mymessage.css">
 </head>
-
 <body ontouchstart style="background:rgba(228, 227, 227, 0.6)">
     <div class="weui-tab">
         <div class="weui-tab__bd">
             <!-- 消息中心页面 -->
-            <div id="tab1" class="weui-tab__bd-item ">
-                <h1>页面一</h1>
+            <div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active">
+                <header class='demos-header' style="padding-top: 3.4rem">
+      <h5 class="my-title">审批</h5>
+    </header>
+    <div class="weui-grids my-grids">
+      <a href="myapply.html" class="weui-grid my-weui">
+        <div class="weui-grid__icon">
+          <i class="fa fa-tint" style="font-size: 30px;"></i>
+        </div>
+        <p class="weui-grid__label">
+          待审批
+        </p>
+      </a>
+      <a href="javascript:;" class="weui-grid my-weui open-popup" data-target="#fail">
+        <div class="weui-grid__icon">
+          <i class="fa fa-frown-o" style="font-size: 30px;"></i>
+        </div>
+        <p class="weui-grid__label">
+          审批失败
+        </p>
+      </a>
+    </div>
+       <div class="weui-grids" data-target="#success">
+      <a href="javascript:;" class="weui-grid my-weui open-popup" data-target="#success">
+        <div class="weui-grid__icon">
+          <i class="fa fa-smile-o" style="font-size: 30px;"></i>
+        </div>
+        <p class="weui-grid__label">
+          审批成功
+        </p>
+      </a>
+       <a href="javascript:;" id="show-custom" class="weui-grid my-weui">
+        <div class="weui-grid__icon">
+          <img src="images/icon_nav_cell.png" alt="">
+        </div>
+        <p class="weui-grid__label">
+          审批处理
+        </p>
+      </a>
+    </div>
             </div>
-            <div id="tab2" class="weui-tab__bd-item weui-tab__bd-item--active">
+            <div id="tab2" class="weui-tab__bd-item ">
                 <header class="bar bar-nav" id="apply-title">
                     <h1 class="title">用车申请</h1>
                 </header>
@@ -99,13 +136,13 @@
                         <div class="weui-cells__title"><i class="fa fa-star-half-o"></i>审批人</div>
                         <div class="weui-cells weui-cells_form " id="shenpi">
                             <div class="weui-cell" id="shenpiren">
-                                <a href="javascript:;"> <img src="images/add.png" /></a>
+                              <input class="weui-input" id="in" type="text" value="">
                             </div>
                         </div>
                         <div class="weui-cells__title"><i class="fa fa-star-half-o"></i>抄送人</div>
                         <div class="weui-cells weui-cells_form " id="chaosong">
                             <div class="weui-cell" id="shenpiren">
-                                <a href="javascript:;"> <img src="images/add.png" /></a>
+                             <input class="weui-input" id="on" type="text" value="">
                             </div>
                         </div>
                         <div class='demos-content-padded' id="confirm">
@@ -125,37 +162,15 @@
                 <div class="weui-row weui-no-gutter" id="per-mz">
                     何晓殷
                 </div>
-                <div class="weui-row weui-no-gutter" id="per-col">
-                    <div class="weui-col-33">
-                        <div class="weui-cell weui-cell_access" id="per-doing">
-                            <div class="weui-cell__bd">
-                                <a href="javascript:;" class="open-popup" data-target="#full"> <span class="weui-badge" style="margin-left: 5px;">1</span>
-                                    <br />
-                                    <span style="vertical-align: middle">待审批</span></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="weui-col-33">
-                        <div class="weui-cell weui-cell_access">
-                            <div class="weui-cell__bd">
-                                <a href="javascript:;" class="open-popup" data-target="#fail"> <span class="weui-badge" style="margin-left: 5px;">3</span>
-                                    <br />
-                                    <span style="vertical-align: middle">审批失败</span></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="weui-col-33">
-                        <div class="weui-cell weui-cell_access" id="per-success">
-                            <div class="weui-cell__bd">
-                                <a href="javascript:;"  class=" open-popup" data-target="#half"> <span class="weui-badge" style="margin-left: 5px;">10</span>
-                                    <br />
-                                    <span style="vertical-align: middle">审批成功</span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <div class="weui-cells">
-                    <a class="weui-cell weui-cell_access" id="per-message" href="javascript:;"><img src="images/accoun.png" style="width:20px;margin-right:10px;display:block">
+                  <a class="weui-cell weui-cell_access" id="per-message" href="javascript:;"><img src="images/my-in1.png" style="width:20px;margin-right:10px;display:block">
+                        <div class="weui-cell__bd">
+                            <p>个人信息</p>
+                        </div>
+                        <div class="weui-cell__ft">
+                        </div>
+                    </a>
+                    <a class="weui-cell weui-cell_access open-popup" id="per-message" href="javascript:;"  data-target="#full"><img src="images/accoun.png" style="width:20px;margin-right:10px;display:block">
                         <div class="weui-cell__bd">
                             <p>账号与安全</p>
                         </div>
@@ -186,14 +201,14 @@
         </div>
         <!-- 底部固定部分 -->
         <div class="weui-tabbar">
-            <a href="#tab1" class="weui-tabbar__item">
+            <a href="#tab1" class="weui-tabbar__item  weui-bar__item--on">
       <!--           <span class="weui-badge" style="position: absolute;top: -.4em;right: 1em;"></span> -->
                 <div class="weui-tabbar__icon">
                     <i class="fa fa-comments weui-tabbar__label"></i>
                 </div>
-                <p class="weui-tabbar__label">消息中心</p>
+                <p class="weui-tabbar__label">工作</p>
             </a>
-            <a href="#tab2" class="weui-tabbar__item  weui-bar__item--on">
+            <a href="#tab2" class="weui-tabbar__item  ">
                 <div class="weui-tabbar__icon">
                     <i class="fa fa-plus weui-tabbar__label"></i>
                 </div>
@@ -212,152 +227,33 @@
         <div class="weui-popup__overlay"></div>
         <div class="weui-popup__modal">
             <header class='demos-header' id="dongtai-title">
-                动态信息
+                账号安全
             </header>
-            <div class="weui-cells" id="mz-cell"  onclick="window.location.href= 'apply.html';return false">
-                <div class="weui-cell">
-                    <div class="weui-cell__hd" style="position: relative;margin-right:-12px;">
-                        <i class="fa fa-dot-circle-o" aria-hidden="true" style="width: 50px;display: block"></i>
-                    </div>
-                    <div class="weui-cell__bd">
-                        <p id="mz-ming">何晓殷</p>
-                        <div style="font-size: 13px;color: #888888;">
-                            <div class="weui-row weui-no-gutter" id="mz-col">
-                                <div class="weui-col-33">
-                                    <div class="weui-cell weui-cell_access" id="mz-zt">
-                                        <div class="weui-cell__bd">
-                                            <span style="vertical-align: middle">出差</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="weui-col-33">
-                                    <div class="weui-cell weui-cell_access">
-                                        <div class="weui-cell__bd">
-                                            <span style="vertical-align: middle">小轿车</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="weui-col-33">
-                                    <div class="weui-cell weui-cell_access" id="per-success">
-                                        <div class="weui-cell__bd">
-                                            <span style="vertical-align: middle">三天</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                     <div class="weui-cells">
+                  <a class="weui-cell weui-cell_access" id="per-message" href="javascript:;"><img src="images/icon-read10.png" style="width:20px;margin-right:10px;display:block">
+                        <div class="weui-cell__bd">
+                            <p>登录密码</p>
                         </div>
-                    </div>
-                    <div class="weui-cell__ft" href="apply.html" ><i class="fa fa-hand-o-right "></i></div>
-                </div>
-            </div>
-               <div class="weui-cells" id="mz-cell"  onclick="window.location.href= 'apply.html';return false">
-                <div class="weui-cell">
-                    <div class="weui-cell__hd" style="position: relative;margin-right:-12px;">
-                        <i class="fa fa-dot-circle-o" aria-hidden="true" style="width: 50px;display: block"></i>
-                    </div>
-                    <div class="weui-cell__bd">
-                        <p id="mz-ming">何晓殷</p>
-                        <div style="font-size: 13px;color: #888888;">
-                            <div class="weui-row weui-no-gutter" id="mz-col">
-                                <div class="weui-col-33">
-                                    <div class="weui-cell weui-cell_access" id="mz-zt">
-                                        <div class="weui-cell__bd">
-                                            <span style="vertical-align: middle">出差</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="weui-col-33">
-                                    <div class="weui-cell weui-cell_access">
-                                        <div class="weui-cell__bd">
-                                            <span style="vertical-align: middle">小轿车</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="weui-col-33">
-                                    <div class="weui-cell weui-cell_access" id="per-success">
-                                        <div class="weui-cell__bd">
-                                            <span style="vertical-align: middle">三天</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    <span style="color: #80a049;margin-right:4px">登录密码</span>    <div class="weui-cell__ft">
                         </div>
-                    </div>
-                    <div class="weui-cell__ft" href="javascript:;"><i class="fa fa-hand-o-right "></i></div>
-                </div>
-            </div>
-               <div class="weui-cells" id="mz-cell" onclick="window.location.href= 'apply.html';return false">
-                <div class="weui-cell">
-                    <div class="weui-cell__hd" style="position: relative;margin-right:-12px;">
-                        <i class="fa fa-dot-circle-o" aria-hidden="true" style="width: 50px;display: block"></i>
-                    </div>
-                    <div class="weui-cell__bd">
-                        <p id="mz-ming">何晓殷</p>
-                        <div style="font-size: 13px;color: #888888;">
-                            <div class="weui-row weui-no-gutter" id="mz-col">
-                                <div class="weui-col-33">
-                                    <div class="weui-cell weui-cell_access" id="mz-zt">
-                                        <div class="weui-cell__bd">
-                                            <span style="vertical-align: middle">出差</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="weui-col-33">
-                                    <div class="weui-cell weui-cell_access">
-                                        <div class="weui-cell__bd">
-                                            <span style="vertical-align: middle">小轿车</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="weui-col-33">
-                                    <div class="weui-cell weui-cell_access" id="per-success">
-                                        <div class="weui-cell__bd">
-                                            <span style="vertical-align: middle">三天</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    </a>
+                    <a class="weui-cell weui-cell_access open-popup" id="per-message" href="javascript:;" class="" data-target="#full"><img src="images/icon-read9.png" style="width:20px;margin-right:10px;display:block">
+                        <div class="weui-cell__bd">
+                            <p>密保问题</p>
                         </div>
-                    </div>
-                    <div class="weui-cell__ft" href="javascript:;"><i class="fa fa-hand-o-right "></i></div>
-                </div>
-            </div>
-               <div class="weui-cells" id="mz-cell" onclick="window.location.href= 'apply.html';return false">
-                <div class="weui-cell">
-                    <div class="weui-cell__hd" style="position: relative;margin-right:-12px;">
-                        <i class="fa fa-dot-circle-o" aria-hidden="true" style="width: 50px;display: block"></i>
-                    </div>
-                    <div class="weui-cell__bd">
-                        <p id="mz-ming">何晓殷</p>
-                        <div style="font-size: 13px;color: #888888;">
-                            <div class="weui-row weui-no-gutter" id="mz-col">
-                                <div class="weui-col-33">
-                                    <div class="weui-cell weui-cell_access" id="mz-zt">
-                                        <div class="weui-cell__bd">
-                                            <span style="vertical-align: middle">出差</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="weui-col-33">
-                                    <div class="weui-cell weui-cell_access">
-                                        <div class="weui-cell__bd">
-                                            <span style="vertical-align: middle">小轿车</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="weui-col-33">
-                                    <div class="weui-cell weui-cell_access" id="per-success">
-                                        <div class="weui-cell__bd">
-                                            <span style="vertical-align: middle">三天</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                          <span style="color:#f76160;margin-right:4px">请设置密保找回密码</span> 
+                        <div class="weui-cell__ft">
                         </div>
-                    </div>
-                    <div class="weui-cell__ft" href="javascript:;"><i class="fa fa-hand-o-right "></i></div>
+                    </a>
+                    <a class="weui-cell weui-cell_access" id="per-message" href="javascript:;"><img src="images/icon-read8.png" style="width:20px;margin-right:10px;display:block">
+                        <div class="weui-cell__bd">
+                            <p>绑定手机</p>
+                        </div>
+                         <span style="color:#80a049;margin-right:4px">185****6778</span>    <div class="weui-cell__ft">
+                        </div>
+                    </a>
                 </div>
-            </div>
+        
        <a href="javascript:;" class="weui-btn weui-btn_primary close-popup" id="mz-close">关闭</a>
         </div>
     </div>
@@ -367,6 +263,161 @@
         <div class="weui-popup__modal">
             <header class='demos-header' id="dongtai-title">
                 失败申请
+            </header>
+            <div class="weui-cells" id="mz-cell">
+                <div class="weui-cell">
+                    <div class="weui-cell__hd" style="position: relative;margin-right:-12px;">
+                        <i class="fa fa-dot-circle-o" aria-hidden="true" style="width: 50px;display: block"></i>
+                    </div>
+                    <div class="weui-cell__bd">
+                        <p id="mz-ming">2017-07-12</p>
+                        <div style="font-size: 13px;color: #888888;">
+                            <div class="weui-row weui-no-gutter" id="mz-col">
+                                <div class="weui-col-33">
+                                    <div class="weui-cell weui-cell_access" id="mz-zt">
+                                        <div class="weui-cell__bd">
+                                            <span style="vertical-align: middle">出差</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="weui-col-33">
+                                    <div class="weui-cell weui-cell_access">
+                                        <div class="weui-cell__bd">
+                                            <span style="vertical-align: middle">小轿车</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="weui-col-33">
+                                    <div class="weui-cell weui-cell_access" id="per-success">
+                                        <div class="weui-cell__bd">
+                                            <span style="vertical-align: middle">三天</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="weui-cell__ft" href="javascript:;"><i class="fa fa-trash-o "></i></div>
+                </div>
+            </div>
+               <div class="weui-cells" id="mz-cell">
+                <div class="weui-cell">
+                    <div class="weui-cell__hd" style="position: relative;margin-right:-12px;">
+                        <i class="fa fa-dot-circle-o" aria-hidden="true" style="width: 50px;display: block"></i>
+                    </div>
+                    <div class="weui-cell__bd">
+                        <p id="mz-ming">2017-07-12</p>
+                        <div style="font-size: 13px;color: #888888;">
+                            <div class="weui-row weui-no-gutter" id="mz-col">
+                                <div class="weui-col-33">
+                                    <div class="weui-cell weui-cell_access" id="mz-zt">
+                                        <div class="weui-cell__bd">
+                                            <span style="vertical-align: middle">出差</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="weui-col-33">
+                                    <div class="weui-cell weui-cell_access">
+                                        <div class="weui-cell__bd">
+                                            <span style="vertical-align: middle">小轿车</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="weui-col-33">
+                                    <div class="weui-cell weui-cell_access" id="per-success">
+                                        <div class="weui-cell__bd">
+                                            <span style="vertical-align: middle">三天</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="weui-cell__ft" href="javascript:;"><i class="fa fa-trash-o  "></i></div>
+                </div>
+            </div>
+               <div class="weui-cells" id="mz-cell">
+                <div class="weui-cell">
+                    <div class="weui-cell__hd" style="position: relative;margin-right:-12px;">
+                        <i class="fa fa-dot-circle-o" aria-hidden="true" style="width: 50px;display: block"></i>
+                    </div>
+                    <div class="weui-cell__bd">
+                        <p id="mz-ming">2017-07-12</p>
+                        <div style="font-size: 13px;color: #888888;">
+                            <div class="weui-row weui-no-gutter" id="mz-col">
+                                <div class="weui-col-33">
+                                    <div class="weui-cell weui-cell_access" id="mz-zt">
+                                        <div class="weui-cell__bd">
+                                            <span style="vertical-align: middle">出差</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="weui-col-33">
+                                    <div class="weui-cell weui-cell_access">
+                                        <div class="weui-cell__bd">
+                                            <span style="vertical-align: middle">小轿车</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="weui-col-33">
+                                    <div class="weui-cell weui-cell_access" id="per-success">
+                                        <div class="weui-cell__bd">
+                                            <span style="vertical-align: middle">三天</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="weui-cell__ft" href="javascript:;"><i class="fa fa-trash-o  "></i></div>
+                </div>
+            </div>
+               <div class="weui-cells" id="mz-cell">
+                <div class="weui-cell">
+                    <div class="weui-cell__hd" style="position: relative;margin-right:-12px;">
+                        <i class="fa fa-dot-circle-o" aria-hidden="true" style="width: 50px;display: block"></i>
+                    </div>
+                    <div class="weui-cell__bd">
+                        <p id="mz-ming">何晓殷</p>
+                        <div style="font-size: 13px;color: #888888;">
+                            <div class="weui-row weui-no-gutter" id="mz-col">
+                                <div class="weui-col-33">
+                                    <div class="weui-cell weui-cell_access" id="mz-zt">
+                                        <div class="weui-cell__bd">
+                                            <span style="vertical-align: middle">出差</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="weui-col-33">
+                                    <div class="weui-cell weui-cell_access">
+                                        <div class="weui-cell__bd">
+                                            <span style="vertical-align: middle">小轿车</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="weui-col-33">
+                                    <div class="weui-cell weui-cell_access" id="per-success">
+                                        <div class="weui-cell__bd">
+                                            <span style="vertical-align: middle">三天</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="weui-cell__ft" href="javascript:;"><i class="fa fa-trash-o  "></i></div>
+                </div>
+            </div>
+                  <a href="javascript:;" class="weui-btn weui-btn_primary close-popup" id="mz-close">关闭</a>
+        
+        </div>
+    </div>
+    <!-- 弹出申请成功的页面 -->
+     <div id="success" class='weui-popup__container'>
+        <div class="weui-popup__overlay"></div>
+        <div class="weui-popup__modal">
+            <header class='demos-header' id="dongtai-title">
+                成功申请
             </header>
             <div class="weui-cells" id="mz-cell">
                 <div class="weui-cell">
@@ -516,67 +567,33 @@
         
         </div>
     </div>
-    <!-- 弹出申请成功的页面 -->
-          <div id="half" class='weui-popup__container popup-bottom'>
-      <div class="weui-popup__overlay"></div>
-      <div class="weui-popup__modal">
-        <div class="toolbar">
-          <div class="toolbar-inner">
-            <a href="javascript:;" class="picker-button close-popup">关闭</a>
-            <h1 class="title">近期成功申请</h1>
-          </div>
-        </div>
-        <div class="modal-content">
-            <div class="weui-cells" id="mz-cell">
-                <div class="weui-cell">
-                    <div class="weui-cell__hd" style="position: relative;margin-right:-12px;">
-                        <i class="fa fa-dot-circle-o" aria-hidden="true" style="width: 50px;display: block"></i>
-                    </div>
-                    <div class="weui-cell__bd">
-                        <p id="mz-ming">2017-07-12</p>
-                        <div style="font-size: 13px;color: #888888;">
-                            <div class="weui-row weui-no-gutter" id="mz-col">
-                                <div class="weui-col-33">
-                                    <div class="weui-cell weui-cell_access" id="mz-zt">
-                                        <div class="weui-cell__bd">
-                                            <span style="vertical-align: middle">出差</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="weui-col-33">
-                                    <div class="weui-cell weui-cell_access">
-                                        <div class="weui-cell__bd">
-                                            <span style="vertical-align: middle">小轿车</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="weui-col-33">
-                                    <div class="weui-cell weui-cell_access" id="per-success">
-                                        <div class="weui-cell__bd">
-                                            <span style="vertical-align: middle">三天</span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </div>
-    </div>
     <script src="../lib/jquery-2.1.4.js"></script>
     <script src="../lib/fastclick.js"></script>
-    <script src="../js/jquery-weui.js"></script>
     <script>
     $(function() {
         FastClick.attach(document.body);
     });
-    $(document).on("open", ".weui-popup-modal", function() {
+    </script>
+        <script src="../js/jquery-weui.js"></script>
+    <script type="text/javascript">
+    $('#show-custom').on("click", function() {
+        $.modal({
+          title: "请选择您的角色！",
+          text: "",
+          buttons: [
+            { text: "审批人", onClick: function(){window.location.href= 'approve.html'} },
+            { text: "调度人", onClick: function(){window.location.href= 'dispatcher.html' } },
+          ]
+        });
+      });
+
+    $(".weui-popup-modal").on("open", function() {
         console.log("open popup");
     }).on("close", ".weui-popup-modal", function() {
         console.log("close popup");
     });
+
+
     $(document).on("click", "#per-return", function() {
         $.confirm("", "您确定要退出登录吗?", function() {
             window.location.href = "login.html";
@@ -656,6 +673,70 @@
             $.toptip('申请成功', 'success');
         }
     });
+      $("#in").select({
+        title: "选择审批人",
+        multi: true,
+        min: 2,
+        max: 2,
+        items: [
+          {
+            title: "张三",
+            value: 1,
+            description: "额外的数据1"
+          },
+          {
+            title: "王五",
+            value: 2,
+            description: "额外的数据2"
+          },
+          {
+            title: "翠花",
+            value: 3,
+            description: "额外的数据3"
+          },
+          {
+            title: "欧阳",
+            value: 4,
+            description: "额外的数据4"
+          },
+          {
+            title: "谢娜",
+            value: 5,
+            description: "额外的数据5"
+          },
+          {
+            title: "张杰",
+            value: 6,
+            description: "额外的数据6"
+          },
+        ],
+        beforeClose: function(values, titles) {
+          if(values.indexOf("6") !== -1) {
+            $.toast("不能选睡觉", "cancel");
+            return false;
+          }
+          return true;
+        },
+        onChange: function(d) {
+          console.log(this, d);
+        },
+        onClose: function (d) {
+          console.log('close')
+        }
+      });
+        $("#on").select({
+        title: "选择抄送人",
+        items: ["姚敏", "周俊", "王望龙", "利用卢", "兰兰", "花花"],
+        onChange: function(d) {
+          console.log(this, d);
+        },
+        onClose: function() {
+          console.log("close");
+        },
+        onOpen: function() {
+          console.log("open");
+        },
+      });
     </script>
 </body>
 

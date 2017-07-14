@@ -83,8 +83,9 @@
              }
              
              .weui-dialog__btn {
-                 color: #000;
-                 font-size: 14px;
+                     color: #4e4d4d;
+    font-size: 16px;
+    font-weight: bold;
              }
              /*用车申请*/
              
@@ -148,12 +149,12 @@
     margin-left:9px;
     font-weight:bold;
 }
-.fa-hand-o-right{
-   color:#af1515;
+.fa-trash-o {
+   color:#ff711c;
 }
 #mz-cell{
   margin-top:8px;
-  height:62px;
+  height:102px;
 }
 #mz-close{
       margin-top: 20px;
@@ -167,3 +168,38 @@
     color:#4f4f4f;
     font-size:14px;
 }
+#tab1{
+    background:#f8f8f8;
+}
+.my-title{
+       font-size: 30px;
+    text-align: center;
+    color:#484c4b;
+}
+.my-weui{
+    border: none;
+    width:50%;
+
+}
+.my-weui:before{
+    border: none
+}
+.my-weui:after{
+    border: none
+}
+.my-grids:before{
+    border:none;
+}
+.my-grids:after{
+    border:none;
+}
+.weui-grid__icon+.weui-grid__label{
+    margin-top:12px;
+}
+.fa-frown-o{
+    color:#e34545;
+}
+.fa-smile-o{
+   color:#ff711c;
+}
+  /*失败申请*/

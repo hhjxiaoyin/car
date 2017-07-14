@@ -44,7 +44,7 @@ $(function () {
                         + '        <span><label>手机：</label>1391****746</span> '
                         + '        <span><label>用车申请：</label>出差</span> '
                         + '      </div>'
-                        + '      <footer><a href="send.html">查看详情</a></footer>'
+                        + '      <footer><a href="apply.html">查看详情</a></footer>'
                         + '    </hgroup>';
                     } else if (itemIndex == 1) {
                         result

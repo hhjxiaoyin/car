@@ -6,48 +6,58 @@ body {
 li {
     list-style: none;
 }
+
 #dp_title {
     background: #ff711c;
     font-size: 18px;
     font-weight: bold;
     color: #000;
 }
+
 .pull-left i {
     margin-left: 8px;
 }
-.weui-navbar{
-	background:#fff;
+
+.weui-navbar {
+    background: #fff;
 }
-.weui-navbar:after{
-	border-bottom: none;
-	
+
+.weui-navbar:after {
+    border-bottom: none;
 }
-.weui-navbar__item:after{
-	border-right:none;
+
+.weui-navbar__item:after {
+    border-right: none;
 }
+
 .weui-navbar__item.weui-bar__item--on {
     color: #353333;
     font-size: 16px;
     background-color: #fff;
-border-bottom: 2px solid #ff711c;
-
+    border-bottom: 2px solid #ff711c;
 }
+
+
 /*目录*/
+
 #myapply-title {
-    background:#ff711c;
+    background: #ff711c;
     font-size: 18px;
     font-weight: bold;
     color: #000;
 }
-.weui-navbar{
-    z-index:100;
+
+.weui-navbar {
+    z-index: 100;
     position: fixed;
-    top:40px;
-    height:48px;
+    top: 40px;
+    height: 48px;
 }
+
 .weui-navbar + .weui-tab__bd {
     margin-top: 90px;
 }
+
 .pull-left i {
     margin-left: 8px;
 }
@@ -76,7 +86,7 @@ border-bottom: 2px solid #ff711c;
 #myapply-me label {
     margin-left: 16px;
     color: #6a6a6a;
-    font-weight:bold;
+    font-weight: bold;
     margin-right: 12px;
 }
 
@@ -85,38 +95,294 @@ border-bottom: 2px solid #ff711c;
 }
 
 .weui-flex__item {
-    font-size: 18px;
+    font-size: 16px;
     text-align: left;
-    margin-left: 10px;
+    margin-left: 12px;
 }
 
 .fa-star-half-o {
-    color: #1c821c;
+    color: #2aa8af;
     margin-right: 6px;
 }
+
+
 /*图片位置*/
-img{
-    margin-left:16%;
-    margin-top:10px;
+
+img {
+    margin-left: 16%;
+    margin-top: 10px;
 }
-ul{
-     margin-left: 106px;
+
+ul {
+    margin-left: 106px;
     margin-top: -106px;
 }
-ul li{
-    line-height: 48px;
 
+ul li {
+    line-height: 48px;
 }
-.weui-row{
-    margin-top:8px;
+
+.weui-row {
+    margin-top: 8px;
 }
-#id_a{
-    margin-top:10px;
-    color:#090908;
-    font-size:16px;
+
+#id_a {
+    margin-top:-96px;
+    color: #090908;
+    font-size: 16px;
+    margin-left:100px;
 }
-#id_b{
-    margin-top:6px;
-    color:#090908;
-    font-size:16px;
+
+#id_b {
+    margin-top: 6px;
+    color: #090908;
+    font-size: 16px;
+    margin-left:100px;
+}
+
+
+/*车辆选择页面*/
+@charset "utf-8";
+/*reset*/
+html {
+  -webkit-font-smoothing: antialiased;
+  -ms-text-size-adjust:100%;
+  -webkit-text-size-adjust: 100%; /* 2 */
+  margin: 0;
+  padding: 0; 
+}
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,dd,form,span,samp,p,a{
+    font-size: 14px;
+    font-weight: normal;
+    margin:0;
+    font-family:  "Microsoft YaHei", Helvetica, STHeiTi,"Helvetica Neue","微软雅黑",SimSun,sans-serif;
+}
+
+
+
+/* 统一上标和下标 */
+sub, sup{
+  font-size:75%;
+  line-height:0;
+  position:relative;
+}
+:root sub, :root sup{
+  vertical-align:baseline; /* for ie9 and other modern browsers */
+}
+sup{
+  top:-0.5em;
+}
+sub{
+  bottom:-0.25em;
+}
+strong {
+  font-weight: normal;
+}
+mark {
+  background: none;
+}
+
+
+
+
+.contain{max-width: 640px; margin: 0 auto; position: relative;}
+
+.fixWidth{
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+}
+
+
+.contain {
+  min-height: 400px;
+  text-align: center;
+}
+
+.contain .demo div{
+  display: block;
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #999;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 40px;
+}
+
+
+.whiteBG {
+  background: white;
+}
+.fullHeight {
+  height: 100%;
+}
+.guideView:before {
+  display: none;
+}
+.center {
+  text-align: center;
+}
+.blue {
+  color: #1e83d3;
+}
+
+
+
+
+
+
+
+.mobileSelect {
+  position: relative;
+  z-index: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.mobileSelect .grayLayer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #eee;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 888;
+  display: block;
+}
+.mobileSelect .content {
+  width: 100%;
+  display: block;
+  position: fixed;
+  z-index: 889;
+  color: black;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  bottom: -350px;
+  left:0;
+  background: white;
+}
+.mobileSelect .content .fixWidth {
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+}
+.mobileSelect .content .fixWidth:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.mobileSelect .content .btnBar {
+  border-bottom: 1px solid #DCDCDC;
+  font-size: 15px;
+  height: 45px;
+  position: relative;
+  text-align: center;
+  line-height: 45px;
+}
+.mobileSelect .content .btnBar .cancel,
+.mobileSelect .content .btnBar .ensure {
+  height: 45px;
+  width: 55px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+}
+.mobileSelect .content .btnBar .cancel {
+  left: 0;
+  color: #666;
+}
+.mobileSelect .content .btnBar .ensure {
+  right: 0;
+  color: #1e83d3;
+}
+.mobileSelect .content .btnBar .title {
+  font-size: 15px;
+}
+.mobileSelect .content .panel:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.mobileSelect .content .panel .wheels {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+.mobileSelect .content .panel .wheel {
+  position: relative;
+  z-index: 0;
+  float: left;
+  width: 50%;
+  height: 200px;
+  overflow: hidden;
+  -webkit-transition: width 0.3s ease;
+  transition: width 0.3s ease;
+}
+.mobileSelect .content .panel .wheel .selectContainer {
+  display: block;
+  text-align: center;
+  -webkit-transition: -webkit-transform 0.18s ease-out;
+  transition: -webkit-transform 0.18s ease-out;
+  transition: transform 0.18s ease-out;
+  transition: transform 0.18s ease-out, -webkit-transform 0.18s ease-out;
+}
+.mobileSelect .content .panel .wheel .selectContainer li {
+  font-size: 15px;
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.mobileSelect .content .panel .selectLine {
+  height: 40px;
+  width: 100%;
+  position: absolute;
+  top: 80px;
+  pointer-events: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-top: 1px solid #DCDCDC;
+  border-bottom: 1px solid #DCDCDC;
+}
+.mobileSelect .content .panel .shadowMask {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 200px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), color-stop(rgba(255, 255, 255, 0)), to(#ffffff));
+  background: -webkit-linear-gradient(top, #ffffff, rgba(255, 255, 255, 0), #ffffff);
+  background: linear-gradient(to bottom, #ffffff, rgba(255, 255, 255, 0), #ffffff);
+  opacity: 0.9;
+  pointer-events: none;
+}
+.mobileSelect-show {
+  opacity: 1;
+  z-index: 10000;
+  visibility: visible;
+}
+.mobileSelect-show .content {
+  bottom: 0;
+}
+#trigger5,#trigger1{
+      background: #d5cfcf;
+    width: 100%;
+    margin: 10px auto;
+    text-align: center;
+    width: 380px;
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 8px;
+    padding-bottom: 8px;
 }

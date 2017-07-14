@@ -7,6 +7,9 @@ body, html {
 a{
   color:#4f4f4f;
 }
+.weui-dialog.weui-dialog--visible, .weui-toast.weui-dialog--visible, .weui-dialog.weui-toast--visible, .weui-toast.weui-toast--visible{
+  border-radius: 8px;
+}
 .demos-header {
   padding: 35px 0;
 }     
@@ -95,8 +98,12 @@ a{
   padding:14px 8px;
 }
 .toolbar .picker-button{
-  color:#fcb04d;
+  color:#446569;
 }
 .toolbar .title{
-  color:#10aeff;
+    color: #e8e5e5;
+    background: #ff711c;
+}
+.weui-cells_checkbox .weui-check:checked+.weui-icon-checked:before{
+  color: #07bb8b;
 }

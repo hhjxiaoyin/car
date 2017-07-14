@@ -1,0 +1,289 @@
+body {
+    background: #EAEAEA;
+    font-family: Arial, Helvetica, sans-serif, "新宋体";
+}
+
+li {
+    list-style: none;
+}
+
+#dp_title {
+    background: #ff711c;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+}
+
+.pull-left i {
+    margin-left: 8px;
+}
+
+
+/*下拉css*/
+
+.dropload-up,
+.dropload-down {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    font-size: 12px;
+    /* 开启硬件加速 */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+.dropload-down {
+    height: 50px;
+}
+
+.dropload-refresh,
+.dropload-update,
+.dropload-load,
+.dropload-noData {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.dropload-load .loading {
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    border-radius: 100%;
+    margin: 6px;
+    border: 2px solid #666;
+    border-bottom-color: transparent;
+    vertical-align: middle;
+    -webkit-animation: rotate 0.75s linear infinite;
+    animation: rotate 0.75s linear infinite;
+}
+
+@-webkit-keyframes rotate {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(180deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@charset "utf-8";
+html {
+    font-size: 75px;
+}
+
+@media screen and (min-width:320px) {
+    html {
+        font-size: 64px;
+    }
+}
+
+@media screen and (min-width:360px) {
+    html {
+        font-size: 72px;
+    }
+}
+
+@media screen and (min-width:375px) {
+    html {
+        font-size: 75px;
+    }
+}
+
+@media screen and (min-width:414px) {
+    html {
+        font-size: 82.8px;
+    }
+}
+
+body,
+button,
+input,
+select,
+textarea {
+    font: 0.173333rem/1.5 Arial, San Francisco, Helvetica, SimHei, SimSun, sans-serif;
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+strong {
+    font-weight: normal;
+}
+
+button,
+input,
+select,
+textarea {
+    padding: 0;
+    background: none;
+    border: 0;
+    font-size: inherit;
+}
+
+input:focus {
+    outline: 0;
+}
+
+i {
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+}
+
+dfn {
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,
+body {
+    background-color: #EAEAEA;
+}
+/* 开户分享数据 */
+
+.tabHead {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background: #fff;
+    overflow: hidden;
+}
+
+.tabHead span {
+    display: block;
+    width: 50%;
+    float: left;
+    position: relative;
+    z-index: 2;
+    color: #888;
+    text-align: center;
+    font-size: 14px;
+    line-height: 0.2rem;
+    padding: 0.18rem 0;
+}
+
+.tabHead span:nth-child(2) {
+    width: 50%;
+}
+
+.tabHead small {
+    font-size: 0.173333rem;
+    display: block;
+}
+
+.tabHead .active {
+    color: #ff6e2b;
+}
+
+.tabHead .border {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    z-index: 5;
+    width: 50%;
+    height: 4px;
+    background: #ff6e2b;
+    -ms-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    -webkit-transform: scale(.5);
+    -ms-transform: scale(.5);
+    transform: scale(.5);
+}
+
+.khfxWarp {
+    padding-top: 0.766667rem
+}
+
+.khfxPane {
+    display: none;
+}
+
+.khfxRow {
+    position: relative;
+    background: #fff;
+    margin: 0.133333rem;
+    padding: 0 0.2rem;
+    border-radius: 14px;
+}
+
+.khfxRow header {
+    overflow: hidden;
+    font-size: 0.16rem;
+    color: #666666;
+    line-height: 0.4rem;
+}
+
+.khfxRow header span {
+    font-size: 0.173333rem;
+    color: #ff6e2b;
+    float: right;
+}
+
+.khfxRow .mid {
+    position: relative;
+    padding: 0.2rem 0;
+    padding-left: 0.56rem;
+    overflow: hidden;
+}
+
+.khfxRow .photo {
+    position: absolute;
+    top: 0.2rem;
+    left: 0;
+    height: 0.426667rem;
+    width: 0.426667rem;
+    border-radius: 100%;
+}
+
+.khfxRow .mid span {
+    display: block;
+    width: 50%;
+    float: left;
+    line-height: 0.3rem;
+    padding-top: 0.026667rem;
+    color: #222;
+}
+
+.khfxRow .mid label {
+    color: #999;
+}
+
+.khfxRow footer {
+    position: relative;
+    line-height: 0.6rem;
+    font-size: 0.2rem;
+    text-align: center;
+}
+
+.khfxRow footer a {
+    display: block;
+    color: #ff6e2b;
+    position: relative;
+    z-index: 5;
+}
