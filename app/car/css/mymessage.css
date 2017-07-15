@@ -145,6 +145,12 @@
   font-size:14px;
 
 }
+#mz-close{
+    color:#fff;
+}
+#mz-cl{
+    color:#fff;
+}
 #mz-ming{
     margin-left:9px;
     font-weight:bold;
@@ -188,7 +194,7 @@
     border: none
 }
 .my-grids:before{
-    border:none;
+    border-top:none;
 }
 .my-grids:after{
     border:none;
@@ -203,3 +209,77 @@
    color:#ff711c;
 }
   /*失败申请*/
+/*消息中心弹框*/
+#ms_a{
+    background: #fff;
+}
+#ms_b{
+        background: #fff;
+    text-align: center;
+    color:#575555;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0 -.5rem;
+    font-size: .8rem;
+    font-weight: 800;
+    line-height: 2.2rem;
+    text-align: center;
+    margin-left:6px;
+    margin-top:60px;
+    border-bottom: 1px solid #dbd8d8;
+}
+#ms_close{
+    float: right;
+    margin-right: 30px;
+    margin-top: -40px;
+    font-size:.8rem;
+}
+#ms_ul img{
+    height:130px;
+    width:140px;
+    margin-left:32%;
+    margin-top:50px;
+}
+ #ms_ul span{
+    color:#adabab;
+    font-size:18px;
+    text-align: center;
+    margin-left:40%;
+    margin-top:8px;
+}
+/*个人信息的页面*/
+#personal-title{
+      background:#fff;
+                color:#897d7d;
+                font-size:.90rem;
+                letter-spacing: 2px;
+                font-weight:bold;
+                text-align: center;
+                padding-top:68px;
+                height:0px;
+
+}
+#permg{
+     height: 30px;
+                 width: 30px;
+                 border-radius: 50%;
+
+}
+.per{
+        color: #7e7c7c;
+    font-size: 14px;
+    letter-spacing: 3px;
+}
+.fa-th-list{
+    color:#346366;
+}
+.fa-linux{
+    color:#1c3b3d;
+}
+.fa-align-right{
+    color:#346366;
+}
+.fa-align-left{
+    color:#346366;
+}

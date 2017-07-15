@@ -23,7 +23,7 @@
     <div class="weui-grids my-grids">
       <a href="myapply.html" class="weui-grid my-weui">
         <div class="weui-grid__icon">
-          <i class="fa fa-tint" style="font-size: 30px;"></i>
+          <i class="fa fa-th-list" style="font-size: 30px;"></i>
         </div>
         <p class="weui-grid__label">
           待审批
@@ -31,7 +31,7 @@
       </a>
       <a href="javascript:;" class="weui-grid my-weui open-popup" data-target="#fail">
         <div class="weui-grid__icon">
-          <i class="fa fa-frown-o" style="font-size: 30px;"></i>
+          <i class="fa fa-align-right" style="font-size:30px;"></i>
         </div>
         <p class="weui-grid__label">
           审批失败
@@ -41,7 +41,7 @@
        <div class="weui-grids" data-target="#success">
       <a href="javascript:;" class="weui-grid my-weui open-popup" data-target="#success">
         <div class="weui-grid__icon">
-          <i class="fa fa-smile-o" style="font-size: 30px;"></i>
+          <i class="fa fa-align-left " style="font-size: 30px;"></i>
         </div>
         <p class="weui-grid__label">
           审批成功
@@ -49,7 +49,7 @@
       </a>
        <a href="javascript:;" id="show-custom" class="weui-grid my-weui">
         <div class="weui-grid__icon">
-          <img src="images/icon_nav_cell.png" alt="">
+           <i class="fa fa-linux" style="font-size: 30px;"></i>
         </div>
         <p class="weui-grid__label">
           审批处理
@@ -163,7 +163,7 @@
                     何晓殷
                 </div>
                 <div class="weui-cells">
-                  <a class="weui-cell weui-cell_access" id="per-message" href="javascript:;"><img src="images/my-in1.png" style="width:20px;margin-right:10px;display:block">
+                  <a class="weui-cell weui-cell_access open-popup" id="per-message" data-target="#personal"><img src="images/my-in1.png" style="width:20px;margin-right:10px;display:block">
                         <div class="weui-cell__bd">
                             <p>个人信息</p>
                         </div>
@@ -186,9 +186,9 @@
                     </a>
                 </div>
                 <div class="weui-cells">
-                    <a class="weui-cell weui-cell_access per-set" id="per-message" href="javascript:;"><img src="images/tongzhi.png" style="width:20px;margin-right:10px;display:block;color:red">
+                    <a class="weui-cell weui-cell_access per-set open-popup" id="per-message" data-target="#mscenter"><img src="images/tongzhi.png" style="width:20px;margin-right:10px;display:block;color:red">
                         <div class="weui-cell__bd">
-                            <p>新消息通知</p>
+                            <p>消息中心</p>
                         </div>
                         <div class="weui-cell__ft">
                         </div>
@@ -228,6 +228,7 @@
         <div class="weui-popup__modal">
             <header class='demos-header' id="dongtai-title">
                 账号安全
+                  <a href="javascript:;"  class="icon  close-popup" id="mz_close"><i class="fa fa-times" id="mz_cl" style="color:#fff;float:right;margin-right:12px"></i></a>
             </header>
                      <div class="weui-cells">
                   <a class="weui-cell weui-cell_access" id="per-message" href="javascript:;"><img src="images/icon-read10.png" style="width:20px;margin-right:10px;display:block">
@@ -253,8 +254,61 @@
                         </div>
                     </a>
                 </div>
-        
-       <a href="javascript:;" class="weui-btn weui-btn_primary close-popup" id="mz-close">关闭</a>
+        </div>
+    </div>
+    <!-- 弹出个人信息的页面 -->
+    <div id="personal" class='weui-popup__container'>
+        <div class="weui-popup__overlay"></div>
+        <div class="weui-popup__modal">
+            <header class='demos-header' id="personal-title">
+                个人信息
+                  <a href="javascript:;"  class="icon close-popup" id="mz_close"><i class="fa fa-times" id="mz_cl" style="color:#888;float:right;margin-right:12px"></i></a>
+            </header>
+                     <div class="weui-cells">
+                  <a class="weui-cell weui-cell_access" id="per-message" href="javascript:;">
+                        <div class="weui-cell__bd per">
+                            <p>头像</p>
+                        </div>
+                    <span style="margin-right:4px"><img src="images/user2.jpg"  id="permg"/></span>    <div class="weui-cell__ft">
+                        </div> 
+                    </a>
+                    <a class="weui-cell weui-cell_access open-popup" id="per-message" href="javascript:;" class="" data-target="#full">
+                        <div class="weui-cell__bd per">
+                            <p>所属部门</p>
+                        </div>
+                          <span style="color:#444;margin-right:4px">人事部</span> 
+                        <div class="weui-cell__ft">
+                        </div>
+                    </a>
+                    <a class="weui-cell weui-cell_access" id="per-message" href="javascript:;">
+                        <div class="weui-cell__bd per">
+                            <p>绑定手机</p>
+                        </div>
+                         <span style="color:#444;margin-right:4px">185****6778</span>    <div class="weui-cell__ft">
+                        </div>
+                    </a>
+                        <a class="weui-cell weui-cell_access" id="per-message" href="javascript:;">
+                        <div class="weui-cell__bd per">
+                            <p>性别</p>
+                        </div>
+                         <span style="color:#444;margin-right:4px">女</span>    <div class="weui-cell__ft">
+                        </div>
+                    </a>
+                   <a class="weui-cell weui-cell_access" id="per-message" href="javascript:;">
+                        <div class="weui-cell__bd per">
+                            <p>地区</p>
+                        </div>
+                         <span style="color:#444;margin-right:4px">湖南长沙</span>    <div class="weui-cell__ft">
+                        </div>
+                    </a>
+                       <a class="weui-cell weui-cell_access" id="per-message" href="javascript:;">
+                        <div class="weui-cell__bd per">
+                            <p>个人实名认证</p>
+                        </div>
+                         <span style="color:#444;margin-right:4px">已认证</span>    <div class="weui-cell__ft">
+                        </div>
+                    </a>
+                </div>
         </div>
     </div>
     <!-- 弹出审批失败的对话框 -->
@@ -263,6 +317,7 @@
         <div class="weui-popup__modal">
             <header class='demos-header' id="dongtai-title">
                 失败申请
+                    <a href="javascript:;"  class="icon close-popup" id="mz_close"><i class="fa fa-times" id="mz_cl" style="color:#fff;float:right;margin-right:12px"></i></a>
             </header>
             <div class="weui-cells" id="mz-cell">
                 <div class="weui-cell">
@@ -408,7 +463,6 @@
                     <div class="weui-cell__ft" href="javascript:;"><i class="fa fa-trash-o  "></i></div>
                 </div>
             </div>
-                  <a href="javascript:;" class="weui-btn weui-btn_primary close-popup" id="mz-close">关闭</a>
         
         </div>
     </div>
@@ -418,6 +472,7 @@
         <div class="weui-popup__modal">
             <header class='demos-header' id="dongtai-title">
                 成功申请
+                <a href="javascript:;"  class="icon close-popup" id="mz_close"><i class="fa fa-times" id="mz_cl" style="color:#fff;float:right;margin-right:12px"></i></a>
             </header>
             <div class="weui-cells" id="mz-cell">
                 <div class="weui-cell">
@@ -563,11 +618,26 @@
                     <div class="weui-cell__ft" href="javascript:;"><i class="fa fa-hand-o-right "></i></div>
                 </div>
             </div>
-                  <a href="javascript:;" class="weui-btn weui-btn_primary close-popup" id="mz-close">关闭</a>
         
         </div>
     </div>
+<div id="mscenter" class='weui-popup__container'>
+        <div class="weui-popup__overlay"></div>
+ <div class="weui-popup__modal" id="ms_a">
+     <header id="ms_b">
+    <h1 class="title" id="ms-title">消息中心</h1>
+    <a href="javascript:;"  class="icon pull-left close-popup" id="ms_close"><i class="fa fa-times"></i></a>
+     </header>
+<div class="ms_image">
+<ul id="ms_ul">
+ <li> <img src="images/dulb.png" /></li>
+ <li> <span>暂无消息</span></li>
+</ul>
+</div>
+ </div>
+</div>
     <script src="../lib/jquery-2.1.4.js"></script>
+    <script src="js/mscenter.js"></script>
     <script src="../lib/fastclick.js"></script>
     <script>
     $(function() {
@@ -583,6 +653,8 @@
           buttons: [
             { text: "审批人", onClick: function(){window.location.href= 'approve.html'} },
             { text: "调度人", onClick: function(){window.location.href= 'dispatcher.html' } },
+            { text: "关闭", onClick: function(){ console.log("close popup");
+             } },
           ]
         });
       });
@@ -661,11 +733,11 @@
             $.toptip('请选择车辆类型', 'error');
             return false;
         }
-        if ($("#shenpi").val() == "") {
+        if ($("#in").val() == "") {
             $.toptip('请选择审批人', 'error');
             return false;
         }
-        if ($("#chaosong").val() == "") {
+        if ($("#on").val() == "") {
             $.toptip('请选择抄送人', 'error');
             return false;
         }
@@ -712,7 +784,7 @@
         ],
         beforeClose: function(values, titles) {
           if(values.indexOf("6") !== -1) {
-            $.toast("不能选睡觉", "cancel");
+            $.toast("");
             return false;
           }
           return true;
